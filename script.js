@@ -43,12 +43,13 @@ const createPokemonCard = (pokemon) => {
     pokemonEl.style.backgroundColor = color;
     const pokemonInnerHTML = `
         <div class="img-container">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/crystal/${pokemon.id}.png" alt="${name}">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ii/crystal/${pokemon.id}.png" alt="${name}" loading='lazy'>
         </div>
         <div class="info">
             <span class="number">#${id}</span>
             <h3 class="name">${name}</h3>
             <small class="type">Type: <span>${type}</span></small>
+            <a href="pokemon.html?id=${pokemon.id}" class="details-link">More Details</a>
         </div>
     `;
     pokemonEl.innerHTML = pokemonInnerHTML;
